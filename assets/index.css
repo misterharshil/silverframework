@@ -167,3 +167,15 @@ form button[type="submit"].btn {
   color: #43aa4c; 
   padding: 0.5rem 0;
 }
+
+.card {
+  padding: 1rem 1.5rem;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px -1px #000000;
+  background-color: rgb(248, 255, 218);
+}
+
+.card p {
+  margin-bottom: 0px;
+}

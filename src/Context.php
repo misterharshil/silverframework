@@ -39,4 +39,19 @@ class Context
     {
         return $this->author;
     }
+
+       /**
+     * @var array
+     */
+    private $posts = [];
+
+    public function setPosts(array $posts)
+    {
+        $this->posts = $posts;
+    }
+
+    public function getPosts(): array
+    {
+        return $this->posts;
+    }
 }
