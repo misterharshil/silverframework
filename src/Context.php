@@ -9,4 +9,34 @@ class Context
     public string $title = '';
 
     public string $content = '';
+    
+    /**
+     * @var string
+     */
+    private $body = '';
+
+    public function setBody(string $body)
+    {
+        $this->body = $body;
+    }
+
+    public function getBody(): string
+    {
+        return $this->body;
+    }
+
+    /**
+     * @var string
+     */
+    private $author = '';
+
+    public function setAuthor(string $author)
+    {
+        $this->author = $author;
+    }
+
+    public function getAuthor(): string
+    {
+        return $this->author;
+    }
 }
