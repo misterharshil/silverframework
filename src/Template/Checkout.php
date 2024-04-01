@@ -22,21 +22,32 @@ class Checkout extends Layout
                             <table class="order-summary">
                                 <thead>
                                     <tr>
-                                        <th></th>
+                                        <!-- Added `Product Image` title -->
+                                        <th>Product Image</th>
                                         <th>Item</th>
                                         <th>Quantity</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Product Thumbnail</td>
+                                                <!--   <td>Product Thumbnail</td> 
+                                     Replacing Text with Image provided -->
+                                     <td><img src="/images/product.jpg" alt="product.jpg" class="product-thumb"/></td>
                                         <td>Lorem Widget</td>
                                         <td>1</td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="form-field form-field--required">
+                             <div class="form-field__contents">
+                             <label for="risenshine" class="checkbox-label">
+                           <input type="checkbox" name="risenshine" id="risenshine" class="checkbox-input"/>
+                           <span class="checkbox-text">With our "Rise & Shine" beta program, you get early access to new features, but they may not always work perfectly. You can change your beta preference at any time after you join.</span>
+                             </label>
+                             </div>
                         </div>
                     </div>
+    </div>
                     <div class="frame">
                         <h2 class="frame__title">Account Details</h2>
                         <div class="frame__contents">
@@ -83,12 +94,23 @@ class Checkout extends Layout
                                 </div>
                             </div>
                             <div class="form-field form-field--required">
-                                <label class="form-field__label" for="billing_address_line1">Street Address: <span class="form-field__label-required"> (required)</span></label>
+                               <!-- <label class="form-field__label" for="billing_address_line1">Street Address: <span class="form-field__label-required"> (required)</span></label> -->
+                               <label class="form-field__label" for="billing_address_line1">Address Line 1: <span class="form-field__label-required"> (required)</span></label>
                                 <div class="form-field__contents">
                                     <div class="textarea__container">
-                                        <textarea name="billing_address_line1" id="billing_address_line1" class="textarea" rows="2" cols="35"></textarea>
+                                                    <!--  <textarea name="billing_address_line1" id="billing_address_line1" class="textarea" rows="2" cols="35"></textarea> 
+                                        Removing textarea because we need input type instead
+                                    -->
+                                    <input type="text" name="billing_address_line1" id="billing_address_line1" class="entry" required/>
                                     </div>
                                 </div>
+                                   <!-- Adding optional Address Line 2 -->
+                              <div class="form-field form-field--label-optional">
+                                 <label class="form-field__label" for="billing_address_line2">Address Line 2:    <span class="form-field__label-optional">(optional)</span></label>
+                             <div class="form-field__contents">
+                                   <input type="text" name="billing_address_line2" id="billing_address_line2" class="entry"/>
+                             </div>
+                             <!-- -->
                             </div>
                             <div class="form-field form-field--required">
                                 <label class="form-field__label" for="billing_address_city">City: <span class="form-field__label-required"> (required)</span></label>
@@ -104,7 +126,17 @@ class Checkout extends Layout
                             </div>
                         </div>
                     </div>
-                </form>
+    </div>
+                    <div class="frame">
+                        <div class="frame__contents">
+                            <div class="form-field">
+                                <div class="form-field__contents">
+                                    <button type="submit" class="btn">Place Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>                                      
 HTML;
         // @codingStandardsIgnoreEnd
     }
